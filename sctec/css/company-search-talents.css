@@ -42,7 +42,9 @@
 @media(max-width:768px){.company-search{margin-left:0}.company-search__filters{padding:20px 16px}.company-search__controls{display:grid;grid-template-columns:1fr 1fr}.company-search__query{grid-column:1/-1;width:100%}.company-filter__trigger{justify-content:space-between;width:100%}.company-search__switch{grid-column:1/-1}.company-filter__popover{position:fixed;top:auto;right:16px;bottom:16px;left:16px;width:auto;max-height:min(60vh,432px);overflow:auto}.company-search__results{padding:16px}.company-search__results-header{align-items:flex-start;flex-direction:column}.company-search__sort{width:100%;justify-content:flex-end}.company-sort__menu{right:0}.company-candidate{padding:16px}.company-search__pagination{flex-wrap:wrap;margin-top:20px;padding:14px}.candidate-profile-dialog{width:100vw;border-radius:0}.candidate-profile__header{gap:12px}.candidate-profile__avatar{width:60px;height:60px;flex-basis:60px}.candidate-profile__contacts{margin-left:-72px;padding-top:8px}.candidate-profile__body{padding:12px}.candidate-profile__section{padding:16px;border-radius:18px}}
 @media(max-width:480px){.company-search__controls{grid-template-columns:1fr}.company-search__query,.company-search__switch{grid-column:auto}.company-candidate__summary{display:none}.company-candidate__meta{align-items:flex-start;flex-direction:column;gap:2px}.company-candidate__meta .company-candidate__dot{display:none}}
 
-.company-search-page #company-search-title { position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+@media (max-width: 768px) {
+  .company-search-page #company-search-title { position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+}
 @media(max-width:768px){
 .company-search__results-header{flex-direction:row;align-items:center;justify-content:space-between;gap:8px}
 .company-search__results-header>p{flex:0 1 auto}
