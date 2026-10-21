@@ -8,7 +8,8 @@
     "http://127.0.0.1:5181",
     "http://127.0.0.1:5186",
   ]);
-  const screens = Object.freeze({
+  const BASE = window.location.pathname.replace(/\/[^/]*$/, "");
+  const rawScreens = Object.freeze({
     "sctec-login": Object.freeze({ route: "#/sctec/talent-login", path: "/pages/login.html" }),
     "sctec-student-companies": Object.freeze({ route: "#/sctec/student/companies", path: "/pages/aluno-empresas.html" }),
     "sctec-student-profile": Object.freeze({ route: "#/sctec/student/profile", path: "/pages/aluno-perfil.html" }),
@@ -29,6 +30,7 @@
     "sctec-admin-user-create": Object.freeze({ route: "#/sctec/admin/user-create", path: "/pages/admin-usuario-cadastro.html" }),
     "sctec-admin-tags": Object.freeze({ route: "#/sctec/admin/tags", path: "/pages/admin-tags.html" }),
   });
+  const screens = Object.freeze(Object.fromEntries(Object.entries(rawScreens).map(([id, screen]) => [id, Object.freeze({ ...screen, path: BASE + screen.path })])));
   const routes = new Map(Object.entries(screens).map(([id, screen]) => [screen.route, { id, ...screen }]));
   let frame = document.getElementById("sctec-content");
   const error = document.getElementById("viewer-error");
@@ -227,6 +229,6 @@
     currentScreenId = initialRoute.id;
     frame.src = initialRoute.path;
   } else {
-    frame.src = "/index.html";
+    frame.src = BASE + "/index.html";
   }
 })();
